@@ -1,0 +1,65 @@
+{
+    "name": "serverless-instana-wrapper",
+    "version": "1.0.0",
+    "description": "A Serverless framework plugin to automatically configure the Instana auto-wrap layer as the lambda handler.",
+    "keywords": [
+        "serverless",
+        "aws",
+        "instana",
+        "tracing"
+    ],
+    "homepage": "https://github.com/spamalot22/serverless-instana-wrapper",
+    "bugs": {
+        "url": "https://github.com/spamalot22/serverless-instana-wrapper/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/spamalot22/serverless-instana-wrapper.git"
+    },
+    "license": "MIT",
+    "author": "Sam Keable-Steer",
+    "main": "src/serverless-instana-wrapper.js",
+    "scripts": {
+        "audit": "check-audit --registry=https://registry.npmjs.org",
+        "resolve-audit": "resolve-audit --registry=https://registry.npmjs.org",
+        "format": "npx prettier --write '**/*.{js,yml,json}' && eslint . --fix --color",
+        "lint": "npx prettier --check '**/*.{js,yml,json}' && eslint . --color",
+        "test": "jest --colors --coverage -- ."
+    },
+    "jest": {
+        "coveragePathIgnorePatterns": [
+            "__test__/"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 80,
+                "functions": 80,
+                "lines": 80,
+                "statements": 80
+            }
+        },
+        "testEnvironment": "node",
+        "testPathIgnorePatterns": [
+            "/node_modules/"
+        ]
+    },
+    "dependencies": {
+        "@aws-sdk/client-lambda": "^3.150.0",
+        "chalk": "^4.1.2"
+    },
+    "devDependencies": {
+        "aws-sdk-client-mock": "^0.6.2",
+        "aws-sdk-mock": "^5.7.0",
+        "eslint": "^8.22.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-filenames": "^1.3.2",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-inclusive-language": "^2.2.0",
+        "eslint-plugin-jest": "^26.8.3",
+        "eslint-plugin-prettier": "^4.2.1",
+        "jest": "^28.1.3",
+        "npm-audit-resolver": "^2.3.1",
+        "prettier": "^2.7.1"
+    }
+}
