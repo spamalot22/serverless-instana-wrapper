@@ -1,12 +1,16 @@
 {
     "name": "serverless-instana-wrapper",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Serverless framework plugin to automatically configure the Instana auto-wrap layer as the lambda handler.",
     "keywords": [
         "serverless",
-        "aws",
         "instana",
-        "tracing"
+        "tracing",
+        "metrics",
+        "plugin",
+        "lambda",
+        "performance",
+        "aws"
     ],
     "homepage": "https://github.com/spamalot22/serverless-instana-wrapper",
     "bugs": {
@@ -21,9 +25,9 @@
     "main": "src/serverless-instana-wrapper.js",
     "scripts": {
         "audit": "check-audit --registry=https://registry.npmjs.org",
-        "resolve-audit": "resolve-audit --registry=https://registry.npmjs.org",
         "format": "npx prettier --write '**/*.{js,yml,json}' && eslint . --fix --color",
         "lint": "npx prettier --check '**/*.{js,yml,json}' && eslint . --color",
+        "resolve-audit": "resolve-audit --registry=https://registry.npmjs.org",
         "test": "jest --colors --coverage -- ."
     },
     "jest": {
@@ -44,7 +48,7 @@
         ]
     },
     "dependencies": {
-        "@aws-sdk/client-lambda": "^3.150.0",
+        "@aws-sdk/client-lambda": "^3.152.0",
         "chalk": "^4.1.2"
     },
     "devDependencies": {
