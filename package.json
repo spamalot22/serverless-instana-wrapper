@@ -45,11 +45,13 @@
         "testEnvironment": "node",
         "testPathIgnorePatterns": [
             "/node_modules/"
-        ]
+        ],
+        "testResultsProcessor": "jest-sonar-reporter"
     },
     "dependencies": {
         "@aws-sdk/client-lambda": "^3.152.0",
-        "chalk": "^4.1.2"
+        "chalk": "^4.1.2",
+        "jest-sonar-reporter": "^2.0.0"
     },
     "devDependencies": {
         "aws-sdk-client-mock": "^0.6.2",
