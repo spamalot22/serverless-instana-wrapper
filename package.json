@@ -1,6 +1,6 @@
 {
     "name": "serverless-instana-wrapper",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A Serverless framework plugin to automatically configure the Instana auto-wrap layer as the lambda handler.",
     "keywords": [
         "serverless",
